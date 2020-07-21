@@ -20,6 +20,11 @@ pipeline {
       }
     }
 
+    stage('set ansible role path') {
+      steps {
+        sh 'sleep 5000'
+      }
+    }
 
     stage('ansible') {
       steps {
