@@ -17,7 +17,7 @@ pipeline {
     stage('set ansible env') {
       steps {
         sh 'export ANSIBLE_ROLES_PATH=$WORKSPACE/roles'
-        sh 'export ANSIBLE_HOST_KEY_CHECKING=False'
+        sh 'sed -i 's/#host_key_checking = False/host_key_checking = False/' /etc/ansible/ansible.cfg'
       }
     }
 
