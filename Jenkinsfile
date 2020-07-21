@@ -20,7 +20,6 @@ pipeline {
         sh 'export ANSIBLE_HOST_KEY_CHECKING=False'
       }
     }
-export ANSIBLE_HOST_KEY_CHECKING=False
 
     stage('ansible') {
       steps {
