@@ -20,18 +20,13 @@ pipeline {
       }
     }
 
-    stage('sleep') {
-      steps {
-        sh 'sleep 5000'
-      }
-    }
 
     stage('ansible') {
       steps {
       ansiColor('xterm') {
           ansiblePlaybook(
-              playbook: '/var/jenkins_home/workspace/ansible-pipeline/apigate-ansible/playbook.yaml',
-              inventory: '/var/jenkins_home/workspace/ansible-pipeline/apigate-ansible/hosts.ini',
+              playbook: '/home/jenkins/agent/workspace/ansible-pipeline/playbook.yaml',
+              inventory: '/home/jenkins/agent/workspace/ansible-pipeline/hosts.ini',
               credentialsId: 'ansible-ssh-key-oslogin',
               colorized: true)
           }
