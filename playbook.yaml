@@ -1,0 +1,4 @@
+- hosts: haproxy
+  sudo: yes
+  roles:
+    - { role: haproxy }
