@@ -25,8 +25,8 @@ pipeline {
       steps {
       ansiColor('xterm') {
           ansiblePlaybook(
-              playbook: '/var/jenkins_home/workspace/ansible-pipeline/playbook.yaml',
-              inventory: '/var/jenkins_home/workspace/ansible-pipeline/hosts.ini',
+              playbook: '/var/jenkins_home/workspace/ansible-pipeline/apigate-ansible/playbook.yaml',
+              inventory: '/var/jenkins_home/workspace/ansible-pipeline/apigate-ansible/hosts.ini',
               credentialsId: 'ansible-ssh-key-oslogin',
               colorized: true)
           }
