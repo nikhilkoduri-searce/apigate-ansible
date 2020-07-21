@@ -14,12 +14,13 @@ pipeline {
     }
 
 
-    stage('set ansible role path') {
+    stage('set ansible env') {
       steps {
         sh 'export ANSIBLE_ROLES_PATH=$WORKSPACE/roles'
+        sh 'export ANSIBLE_HOST_KEY_CHECKING=False'
       }
     }
-
+export ANSIBLE_HOST_KEY_CHECKING=False
 
     stage('ansible') {
       steps {
