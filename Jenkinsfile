@@ -1,7 +1,7 @@
 pipeline {
 
   agent {
-      label 'master'
+      label 'jenkins-ansible-slave'
   }
 
 
@@ -13,7 +13,15 @@ pipeline {
       }
     }
 
-    stage('init') {
+
+    stage('set ansible role path') {
+      steps {
+        sh 'export ANSIBLE_ROLES_PATH=$WORKSPACE/roles'
+      }
+    }
+
+
+    stage('ansible') {
       steps {
       ansiColor('xterm') {
           ansiblePlaybook(
@@ -24,7 +32,5 @@ pipeline {
           }
         }
     }
-
   }
-
 }
