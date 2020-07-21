@@ -17,8 +17,8 @@ pipeline {
       steps {
       ansiColor('xterm') {
           ansiblePlaybook(
-              playbook: './playbook.yml',
-              inventory: './hosts.ini',
+              playbook: 'playbook.yml',
+              inventory: 'hosts.ini',
               credentialsId: 'ansible-ssh-key-oslogin',
               colorized: true)
           }
