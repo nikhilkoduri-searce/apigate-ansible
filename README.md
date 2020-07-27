@@ -91,5 +91,5 @@ Add the following fields to the pod templates.
 
 For running the ansible script, you just have to push the code in the git.
 
-*Add path of the ansible script to be run in the `playbook` field.
-*Add path of the host files for the ansible scripts to be run on at the `inventory` field.
+* Add path of the ansible script to be run in the `playbook` field.
+* Add path of the host files for the ansible scripts to be run on at the `inventory` field.
