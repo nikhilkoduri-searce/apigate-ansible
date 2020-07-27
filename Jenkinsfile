@@ -27,8 +27,7 @@ pipeline {
           ansiblePlaybook(
               playbook: '/home/jenkins/agent/workspace/ansible-pipeline/playbook.yaml',
               inventory: '/home/jenkins/agent/workspace/ansible-pipeline/hosts.ini',
-              credentialsId: 'ansible-ssh-key-oslogin',
-              colorized: true)
+              credentialsId: 'ansible-ssh-key-oslogin')
           }
         }
     }
